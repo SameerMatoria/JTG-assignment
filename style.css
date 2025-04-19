@@ -19,27 +19,47 @@ html {
   height: 100%;
 }
 
+/* Centered Fixed Header */
 header {
   position: fixed;
-  width: 100%;
+  /* height: 80px; */
   top: 0;
-  padding: 20px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 9;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
+  z-index: 999;
+  transition: all 0.3s ease;
+  border-radius: 0px 0px 30px 30px;
 }
 
+/* Scroll effect */
+header.scrolled {
+  background-color: #11395e;
+  box-shadow: 0 6px 8px #0000002b;
+  color: white;
+}
+
+header.scrolled .nav-links li a,
+header.scrolled .logo {
+  color: white !important;
+}
+
+header.scrolled .social-icons img {
+  filter: brightness(0) invert(1);
+}
+
+/* Navbar layout */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 400px;
+  padding: 25px 40px;
   width: 100%;
   position: relative;
   z-index: 2;
 }
 
+/* Left, Center, Right equal widths */
 .navbar-left,
 .navbar-center,
 .navbar-right {
@@ -48,43 +68,46 @@ header {
   align-items: center;
 }
 
+/* Align content */
+.navbar-left {
+  justify-content: flex-start;
+}
 
 .navbar-center {
   justify-content: center;
-}
-
-.navbar-left {
-  justify-content: flex-start;
 }
 
 .navbar-right {
   justify-content: flex-end;
 }
 
+/* Logo */
 .logo {
   font-size: 20px;
   font-weight: bold;
   color: white;
 }
 
+/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 30px;
 }
 
-.nav-links :hover {
-  color: rgb(255, 197, 120);
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-
 .nav-links li a {
   text-decoration: none;
   color: white;
   font-size: 16px;
+  transition: 0.3s;
 }
 
+.nav-links li a:hover {
+  color: rgb(255, 197, 120);
+  transform: scale(1.1);
+}
+
+/* Social Icons */
 .social-icons {
   display: flex;
   gap: 15px;
@@ -295,11 +318,13 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; /* vertically center content */
+  align-items: center;
+  /* vertically center content */
   width: 100%;
   max-width: 1250px;
   margin: 0 auto;
-  padding: 100px 15px; /* adjusted for cleaner layout */
+  padding: 100px 15px;
+  /* adjusted for cleaner layout */
   box-sizing: border-box;
   height: 75vh;
 }
@@ -337,8 +362,10 @@ button:hover {
 
 .newsletter-container {
   display: flex;
-  align-items: center;              /* vertical centering */
-  justify-content: center;          /* horizontal centering */
+  align-items: center;
+  /* vertical centering */
+  justify-content: center;
+  /* horizontal centering */
   max-width: 1200px;
   margin: 0 auto;
   gap: 60px;
@@ -365,6 +392,7 @@ button:hover {
   gap: 20px;
   min-width: 280px;
 }
+
 .small-heading {
   font-weight: 600;
   font-size: 14px;
@@ -385,12 +413,12 @@ button:hover {
   color: #666;
   /* margin-bottom: 30px; */
 }
-.newsletter-form {
 
-}
+.newsletter-form {}
 
 .newsletter-form input[type="email"] {
-  flex: 1; /* takes up remaining space */
+  flex: 1;
+  /* takes up remaining space */
   /* max-height: 54px; */
   padding: 19px 25px;
   background-color: #f4f4f4;
@@ -418,8 +446,363 @@ button:hover {
 }
 
 
+/* -------------------------------Partners------------------------------------------------------------------------------ */
+
+.partners-section {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.partners-header h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+  color: #252b42;
+  margin-bottom: 30px;
+  line-height: 55px;
+}
+
+.partners-header p {
+  margin: 0 auto;
+  width: 532px;
+  max-width: 100%;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1100px;
+  /* slightly increased */
+  margin: 0 auto;
+  margin-top: 100px;
+  border: 1px solid #e0e0e0;
+}
+
+.partner-card {
+  border: 1px solid #e0e0e0;
+  padding: 40px 20px;
+  /* increased padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.partner-card:hover {
+  transform: scale(1.1);
+  filter: grayscale(100%);
+}
+
+.partner-card p {
+  font-size: 16px;
+  /* slightly bigger */
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.partner-card img {
+  max-height: 55px;
+  /* increased size */
+  max-width: 120px;
+  object-fit: contain;
+}
 
 
+/*----------------------------------------------------------------- Testimonial ------------------------------------------------------------------ */
+
+.testimonials-section {
+  text-align: center;
+  padding: 80px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+  color: #252b42;
+  margin-bottom: 90px;
+  line-height: 55px;
+}
+
+.ibm-logo {
+  height: 60px;
+  margin-bottom: 50px;
+}
+
+.testimonial-text {
+  margin: 0 auto;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 0px;
+}
+
+.author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-weight: 600;
+  margin: 0;
+  font-size: 16px;
+}
+
+.author-title {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.testimonial-button {
+  background-color: #2196f3;
+  color: white;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.testimonial-button:hover {
+  background-color: #1976d2;
+}
+
+
+/* -------------------------------------------------------------Pricing---------------------------------------------------- */
+
+.pricing-section {
+  background-color: #252b42;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.pricing-section h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 30px;
+  line-height: 55px;
+}
+
+.pricing-section p {
+  margin: 0 auto;
+  width: 532px;
+  max-width: 100%;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 90px;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 100%;
+  width: 335px;
+  padding: 40px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all .3s;
+  color: black;
+}
+
+.card.highlighted {
+  background-color: #2196f3;
+  color: white;
+}
+
+.card h3 {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: .1px;
+  color: #252b42;
+  text-align: center;
+}
+
+.card .subtext {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.price .currency {
+  font-size: 20px;
+  vertical-align: super;
+}
+
+.period {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.features li {
+  margin: 5px 0;
+}
+
+.order-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card.highlighted .order-btn {
+  background-color: white;
+  color: #2196f3;
+}
+
+.order-btn:hover {
+  background-color: #1976d2;
+}
+
+
+/* ---------------------------------------------Contact------------------------------------------------------------------- */
+
+
+.contact-section {
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.contact-subtext {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.contact-form {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  width: 100%;
+}
+
+.contact-form h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 20px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: #f1f1f1;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  height: 100px;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #1976d2;
+}
+
+.contact-info {
+  max-width: 500px;
+  text-align: left;
+  width: 100%;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-info i {
+  color: #2196f3;
+  margin-right: 8px;
+}
+
+.social-icons {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #2196f3;
+  display: flex;
+  gap: 20px;
+}
 
 
 
@@ -444,6 +827,7 @@ button:hover {
 
 /* Responsive (optional) */
 @media (max-width: 768px) {
+
   /* General container padding */
   .container {
     padding: 0 20px;
@@ -578,7 +962,8 @@ button:hover {
     text-align: center;
     margin-top: 15px;
   }
-  .Demo_project .Offer_img img{
+
+  .Demo_project .Offer_img img {
     margin-top: 50px;
     width: 300px;
     height: 180px;
