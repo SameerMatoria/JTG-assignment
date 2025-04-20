@@ -26,7 +26,8 @@ header {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 65%;
+  width: 1250px;
+  max-width: 100%;
   z-index: 999;
   transition: all 0.3s ease;
   border-radius: 0px 0px 30px 30px;
@@ -83,7 +84,7 @@ header.scrolled .social-icons img {
 
 /* Logo */
 .logo {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   color: white;
 }
@@ -108,9 +109,14 @@ header.scrolled .social-icons img {
 }
 
 /* Social Icons */
-.social-icons {
+.social-icons-header {
   display: flex;
-  gap: 15px;
+  gap: 25px;
+}
+
+.social-icons-header a img {
+  height: 30px;
+  width: 30px;
 }
 
 
@@ -158,10 +164,11 @@ header.scrolled .social-icons img {
   max-width: 100%;
   font-size: 28px;
   font-weight: 400;
+  margin-bottom: 100px;
 }
 
 button {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   color: rgb(255, 255, 255);
   background-color: rgb(32, 145, 249);
   font-size: 20px;
@@ -173,6 +180,7 @@ button {
   border-image: initial;
   transition: 0.3s;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 
@@ -346,6 +354,7 @@ button:hover {
   font-size: 28px;
   font-weight: 400;
   margin-top: 20px;
+  margin-bottom: 100px;
   max-width: 600px;
   color: #555;
 }
@@ -476,9 +485,10 @@ button:hover {
   grid-template-columns: repeat(4, 1fr);
   max-width: 1100px;
   /* slightly increased */
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 100px auto;
+  /* margin-top: 100px; */
   border: 1px solid #e0e0e0;
+  cursor: pointer;
 }
 
 .partner-card {
@@ -508,7 +518,7 @@ button:hover {
 .partner-card img {
   max-height: 55px;
   /* increased size */
-  max-width: 120px;
+  max-width: 200px;
   object-fit: contain;
 }
 
@@ -569,15 +579,20 @@ button:hover {
 }
 
 .testimonial-button {
-  background-color: #2196f3;
-  color: white;
-  padding: 16px 40px;
-  font-size: 16px;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 15px 63px;
+  justify-content: center;
+  color: #fff;
+  background-color: #2091f9;
+  border-radius: 35px;
   border: none;
-  border-radius: 50px;
+  transition: all .3s;
+  font-size: 20px;
+  white-space: nowrap;
+  margin: 0 auto;
+  margin-top: 80px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 .testimonial-button:hover {
@@ -705,20 +720,28 @@ button:hover {
 
 
 .contact-section {
-  padding: 80px 20px;
+  padding: 150px 20px 20px 50px;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
+  height: 120vh;
 }
 
 .contact-section h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+  color: #252b42;
+  margin-bottom: 30px;
+  line-height: 55px;
 }
 
 .contact-subtext {
-  font-size: 18px;
-  color: #333;
+  margin: 0 auto;
+  width: 532px;
+  max-width: 100%;
+  font-size: 28px;
+  font-weight: 400;
   margin-bottom: 50px;
 }
 
@@ -726,49 +749,58 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
 }
 
 .contact-form {
-  background: #fff;
-  padding: 30px 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  max-width: 320px;
-  width: 100%;
+  padding: 52px 50px;
+  width: 450px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 13px 19px #00000012;
+  border-radius: 20px;
 }
 
 .contact-form h3 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: .1px;
+  text-align: center;
+  margin-bottom: 45px;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 14px 20px;
-  margin-bottom: 15px;
+  padding: 19px;
+  margin-bottom: 45px;
   border-radius: 30px;
   border: none;
   background-color: #f1f1f1;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .contact-form textarea {
-  height: 100px;
-  border-radius: 8px;
+  height: 200px;
+  border-radius: 0px;
   resize: vertical;
+  margin-bottom: 50px;
 }
 
 .contact-form button {
+  position: relative;
   background-color: #2196f3;
   color: white;
   border: none;
-  padding: 12px 30px;
+  padding: 15px 40px;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   transition: background 0.3s ease;
 }
 
@@ -777,19 +809,37 @@ button:hover {
 }
 
 .contact-info {
-  max-width: 500px;
+  max-width: 600px;
   text-align: left;
   width: 100%;
 }
 
+.contact-info iframe {
+  width: 520px;
+  height: 320px;
+  display: block;
+  margin: 60px auto;
+}
+
 .info-row {
+  min-width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0px 15px; */
+}
+
+.info-row p {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  font-size: 13px;
+  text-align: center;
 }
+
 
 .contact-info i {
   color: #2196f3;
@@ -798,13 +848,74 @@ button:hover {
 
 .social-icons {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 30px;
   color: #2196f3;
   display: flex;
   gap: 20px;
 }
 
 
+/* ------------------------------------------------Footer---------------------------------------------------------------- */
+
+
+.site-footer {
+  background-color: #252b42;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 150px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  unicode-bidi: isolate;
+}
+
+.footer-columns {
+  display: grid;
+  width: 580px;
+  max-width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-col h4 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #e4e4e4;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons span {
+  font-size: 24px;
+  margin-right: 15px;
+  cursor: pointer;
+}
 
 
 
