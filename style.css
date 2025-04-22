@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans";
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -45,6 +46,8 @@ header.scrolled .logo {
   color: white !important;
 }
 
+
+
 header.scrolled .social-icons img {
   filter: brightness(0) invert(1);
 }
@@ -54,7 +57,7 @@ header.scrolled .social-icons img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 40px;
+  padding: 0px 40px;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -76,6 +79,7 @@ header.scrolled .social-icons img {
 
 .navbar-center {
   justify-content: center;
+  display: inline;
 }
 
 .navbar-right {
@@ -93,7 +97,7 @@ header.scrolled .social-icons img {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 50px;
 }
 
 .nav-links li a {
@@ -105,7 +109,7 @@ header.scrolled .social-icons img {
 
 .nav-links li a:hover {
   color: rgb(255, 197, 120);
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 /* Social Icons */
@@ -287,9 +291,9 @@ button:hover {
 /* Video Section */
 .features-screen {
   position: relative;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 50px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
@@ -320,7 +324,7 @@ button:hover {
   fill: white;
 }
 
-/* ------------------------------------------------------Offer------------------------------------------ */
+/* -----------------------------------------------------------------Offer--------------------------------------------------------------------------------------------- */
 
 .Demo_project {
   display: flex;
@@ -360,13 +364,15 @@ button:hover {
 }
 
 /* --------------------------------------------------NewsLetter-------------------------------------------------- */
+
+
 .newsletter-section {
   height: 75vh;
   padding: 100px 20px;
   background-color: #fff;
   font-family: 'Segoe UI', sans-serif;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .newsletter-container {
@@ -389,8 +395,9 @@ button:hover {
 }
 
 .newsletter-image img {
-  max-width: 80%;
+  max-width: 95%;
   height: auto;
+  /* margin-left: 100px; */
 }
 
 .newsletter-content {
@@ -400,27 +407,34 @@ button:hover {
   justify-content: center;
   gap: 20px;
   min-width: 280px;
+  margin-left: 50px;
 }
 
 .small-heading {
-  font-weight: 600;
-  font-size: 14px;
-  color: #222;
-  margin-bottom: 10px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: .1px;
+  color: #252b42;
+  /* text-align: center; */
 }
 
 .newsletter-content h2 {
-  font-size: 42px;
-  font-weight: 600;
-  margin: 0 0 20px;
-  color: #1e1e1e;
-  line-height: 1.2;
+  /* text-align: center; */
+  font-size: 48px;
+  font-weight: 400;
+  color: #252b42;
+  margin-bottom: 30px;
+  line-height: 55px;
 }
 
 .newsletter-subtext {
-  font-size: 16px;
-  color: #666;
-  /* margin-bottom: 30px; */
+  /* font-weight: 700; */
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: .1px;
+  color: #252b42;
+  /* text-align: center; */
 }
 
 .newsletter-form {}
@@ -483,7 +497,7 @@ button:hover {
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 1100px;
+  max-width: 1000px;
   /* slightly increased */
   margin: 100px auto;
   /* margin-top: 100px; */
@@ -605,7 +619,7 @@ button:hover {
 .pricing-section {
   background-color: #252b42;
   color: white;
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -625,14 +639,15 @@ button:hover {
   max-width: 100%;
   font-size: 28px;
   font-weight: 400;
-  margin-bottom: 90px;
+  margin-bottom: 120px;
 }
 
 .pricing-cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 50px;
+  margin-top: 20px;
 }
 
 .card {
@@ -640,6 +655,7 @@ button:hover {
   border-radius: 10px;
   max-width: 100%;
   width: 335px;
+  height: 590px;
   padding: 40px 15px;
   display: flex;
   flex-direction: column;
@@ -648,35 +664,60 @@ button:hover {
   color: black;
 }
 
+.card:hover {
+  filter: drop-shadow(0px 8.14769px 63.1446px #357abb)
+}
+
 .card.highlighted {
+  background-color: #2196f3;
+  color: white;
+  width: 335px;
+  height: 670px;
+  margin-top: -43px;
+}
+
+.card.highlighted h3 {
+  margin-top: 43px;
+}
+
+.card.highlighted .features {
   background-color: #2196f3;
   color: white;
 }
 
 .card h3 {
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: .1px;
-  color: #252b42;
-  text-align: center;
-}
-
-.card .subtext {
-  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
   margin-bottom: 20px;
 }
 
-.price {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 5px;
+.card .subtext {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
-.price .currency {
-  font-size: 20px;
-  vertical-align: super;
+.price-box {
+  display: flex;
+  align-items: center
 }
+
+.price-boxnum {
+  font-size: 74px;
+  font-weight: 700;
+  margin-right: 10px
+}
+
+.price-boxdesc {
+  display: flex;
+  flex-direction: column
+}
+
+.price-boxcurr {
+  font-size: 20px;
+  font-weight: 700
+}
+
 
 .period {
   font-size: 14px;
@@ -686,28 +727,36 @@ button:hover {
 .features {
   list-style: none;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   font-size: 14px;
 }
 
 .features li {
-  margin: 5px 0;
+  /* margin: 30px 0; */
+  padding: 10px;
 }
 
 .order-btn {
-  background-color: #2196f3;
-  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px 63px;
+  justify-content: center;
+  color: #fff;
+  background-color: #2091f9;
+  border-radius: 35px;
   border: none;
-  padding: 12px 30px;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all .3s;
+  font-size: 20px;
+  white-space: nowrap;
 }
 
 .card.highlighted .order-btn {
   background-color: white;
+  color: #2196f3;
+}
+
+.card.highlighted .order-btn:hover {
+  background-color: rgb(226, 226, 226);
   color: #2196f3;
 }
 
@@ -724,7 +773,8 @@ button:hover {
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
-  height: 120vh;
+  /* height: 100%; */
+  margin-bottom: 30px;
 }
 
 .contact-section h2 {
@@ -827,6 +877,7 @@ button:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   /* padding: 0px 15px; */
 }
 
@@ -835,15 +886,17 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 200px;
-  font-size: 13px;
+  /* max-width: 300px; */
+  font-size: 14px;
   text-align: center;
 }
 
-
-.contact-info i {
+.info-row i {
   color: #2196f3;
-  margin-right: 8px;
+  margin-bottom: 10px;
+  /* slight space below icon */
+  font-size: 30px;
+  /* makes icons larger */
 }
 
 .social-icons {
@@ -1036,22 +1089,17 @@ button:hover {
   .features-screen {
     width: 100%;
     margin: 40px auto;
+    position: relative;
+    max-width: 800px;
   }
 
+  /* Video */
   .video {
     width: 100%;
     height: auto;
+    display: block;
   }
 
-  .play-button-bg {
-    width: 60px;
-    height: 60px;
-  }
-
-  .play-button-bg__button {
-    width: 30px;
-    height: 36px;
-  }
 
   /* Offer Section */
   .Demo_project {
